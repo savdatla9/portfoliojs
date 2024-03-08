@@ -108,8 +108,8 @@ function App() {
       <Canvas style={{height: '40vh', width: '98.5vw'}} shadows dpr={[1, 2]} camera={{ fov: 50, near: 1, far: 20 }}>
         <directionalLight position={[2, 5, 1]} color='dodgerblue' />
         <ambientLight intensity={0.15} color='white' />
-        {/* <OrbitControls /> */}
         <Donut />
+        {/* <OrbitControls /> */}
         {/* <Title /> */}
         {/* <mesh castShadow receiveShadow scale={5} position={[0, -1.7, 0]} rotation={[Math.PI/2, 0, 0]}>
           <planeGeometry />
