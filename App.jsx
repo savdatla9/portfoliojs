@@ -17,7 +17,7 @@ import { Row, Col } from 'react-bootstrap';
 
 import { 
   OrbitControls, MeshWobbleMaterial, Decal,
-  MeshDistortMaterial, useGLTF, Center,
+  MeshDistortMaterial, Center, Environment
 } from '@react-three/drei';
 
 import "primereact/resources/themes/lara-light-indigo/theme.css";
@@ -210,22 +210,33 @@ function App() {
           </div>
 
           <l>
-            <li style={{fontSize: '18px', fontWeight: '600', marginTop: '10px'}} className='typing'>            
+            <li className='typing'>            
               I'm a React developer with a passion for creating responsive and user-friendly web applications. 
             </li>
 
-            <li style={{fontSize: '18px', fontWeight: '600', marginTop: '10px'}} className='typing'>
+            <li className='typing'>
               I'm also a AR/VR Enthusiast. Learning Three Js, Python & Node Js.
             </li>
 
-            <li style={{fontSize: '18px', fontWeight: '600', marginTop: '10px'}} className='typing'>
+            <li className='typing'>
               Two steps away from becoming Full-Stack Developer.
             </li>
           </l>
-        </div>
 
-        <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'silver'}}>
-          <h3 style={{textDecorationLine: 'underline'}}>Projects</h3>
+          <div className='social_links'>
+            <a href='' target='_blank'>
+              <img src={theme===true?'/github_dark.svg':'/github_light.svg'} />
+            </a>
+
+            <a href='' target='_blank'>
+              <img src={theme===true?'/linkedin_dark.svg':'/linkedin_light.svg'} />
+            </a>
+
+            <a href='' target='_blank'>
+              <img src={theme===true?'/instagram_dark.svg':'/instagram_light.svg'} />
+            </a>
+          </div>
+
         </div>
         
         <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'silver'}}>
@@ -330,6 +341,8 @@ function App() {
         </Center>
 
         <OrbitControls />
+
+        <Environment preset={theme===true ? 'night' : 'dawn'} />
       </Canvas>
     </React.Fragment>
   );
