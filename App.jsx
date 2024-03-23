@@ -172,7 +172,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <ScrollPanel style={{position: 'absolute', zIndex: '500', color: '#fff', width: '100vw', height: '90vh', padding: '5px'}}>
+      <ScrollPanel style={{position: 'absolute', zIndex: '500', color: '#fff', width: 'auto', height: '100vh'}}>
         <header style={{height: '5vh', padding: '2px', paddingTop: '4px'}}>
           <div style={{display: 'flex', position: 'fixed'}}>
             <div>
@@ -195,13 +195,13 @@ function App() {
             </div>
 
             <div style={{position: 'fixed', right: '2.5vw'}} className='btn_user'>
-              <div className="pi pi-user" style={{fontSize: '20px'}}></div>
+              <div className="pi pi-user" style={{fontSize: '22px'}} />
             </div>
           </div>
         </header>
 
-        <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'silver'}}>
-          <div style={{fontSize: '40px', fontWeight: '400'}}>Hi There,</div>
+        <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'ghostwhite'}}>
+          <div style={{fontSize: '35px', fontWeight: '400'}}>Hi There,</div>
 
           <div style={{fontSize: '27px', fontWeight: '600', marginTop: '4.5px', display: 'flex'}}>
             <span style={{fontStyle: 'italic', fontFamily: 'cursive'}}>Sai Akhil Varma Datla</span>. 
