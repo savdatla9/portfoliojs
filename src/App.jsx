@@ -17,7 +17,7 @@ import { Row, Col } from 'react-bootstrap';
 
 import { 
   OrbitControls, MeshWobbleMaterial, Decal,
-  MeshDistortMaterial, useGLTF, Center,
+  MeshDistortMaterial, Center, Environment
 } from '@react-three/drei';
 
 import "primereact/resources/themes/lara-light-indigo/theme.css";
@@ -172,7 +172,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <ScrollPanel style={{position: 'absolute', zIndex: '500', color: '#fff', width: '100vw', height: '90vh', padding: '5px'}}>
+      <ScrollPanel style={{position: 'absolute', zIndex: '500', color: '#fff', width: '100vw', height: '100vh'}}>
         <header style={{height: '5vh', padding: '2px', paddingTop: '4px'}}>
           <div style={{display: 'flex', position: 'fixed'}}>
             <div>
@@ -195,13 +195,13 @@ function App() {
             </div>
 
             <div style={{position: 'fixed', right: '2.5vw'}} className='btn_user'>
-              <div className="pi pi-user" style={{fontSize: '20px'}}></div>
+              <div className="pi pi-user" style={{fontSize: '22px'}} />
             </div>
           </div>
         </header>
 
-        <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'silver'}}>
-          <div style={{fontSize: '40px', fontWeight: '400'}}>Hi There,</div>
+        <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'ghostwhite'}}>
+          <div style={{fontSize: '35px', fontWeight: '400'}}>Hi There,</div>
 
           <div style={{fontSize: '27px', fontWeight: '600', marginTop: '4.5px', display: 'flex'}}>
             <span style={{fontStyle: 'italic', fontFamily: 'cursive'}}>Sai Akhil Varma Datla</span>. 
@@ -210,30 +210,41 @@ function App() {
           </div>
 
           <l>
-            <li style={{fontSize: '18px', fontWeight: '600', marginTop: '10px'}} className='typing'>            
+            <li className='typing'>            
               I'm a React developer with a passion for creating responsive and user-friendly web applications. 
             </li>
 
-            <li style={{fontSize: '18px', fontWeight: '600', marginTop: '10px'}} className='typing'>
+            <li className='typing'>
               I'm also a AR/VR Enthusiast. Learning Three Js, Python & Node Js.
             </li>
 
-            <li style={{fontSize: '18px', fontWeight: '600', marginTop: '10px'}} className='typing'>
+            <li className='typing'>
               Two steps away from becoming Full-Stack Developer.
             </li>
           </l>
-        </div>
 
-        <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'silver'}}>
-          <h3 style={{textDecorationLine: 'underline'}}>Projects</h3>
+          <div className='social_links'>
+            <a href='https://github.com/sai2702/' target='_blank'>
+              <img src={theme===false?'/github_dark.svg':'/github_light.svg'} />
+            </a>
+
+            <a href='https://www.linkedin.com/in/sai-akhil-varma-datla-051b3b158/' target='_blank'>
+              <img src={theme===false?'/linkedin_dark.svg':'/linkedin_light.svg'} />
+            </a>
+
+            <a href='https://www.instagram.com/d.s.a.varma9/' target='_blank'>
+              <img src={theme===false?'/instagram_dark.svg':'/instagram_light.svg'} />
+            </a>
+          </div>
+
         </div>
         
         <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'silver'}}>
           <h3 style={{textDecorationLine: 'underline'}}>Skills</h3>
 
           <Row>
-            <Col xs={3}>
-              <Canvas>
+            <Col xs={2}>
+              {/* <Canvas>
                 <ambientLight intensity={0.5} />
 
                 <OrbitControls />
@@ -243,11 +254,13 @@ function App() {
                   <MeshDistortMaterial side={THREE.DoubleSide} />
                   <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={ReactMap} />
                 </mesh>
-              </Canvas>
+              </Canvas> */}
+
+              <img src={'react.png'} style={{width: '100px', height: 'auto'}} />
             </Col>
 
-            <Col xs={3}>
-              <Canvas>
+            <Col xs={2}>
+              {/* <Canvas>
                 <ambientLight intensity={0.5} />
 
                 <OrbitControls />
@@ -257,11 +270,12 @@ function App() {
                   <MeshDistortMaterial side={THREE.DoubleSide} />
                   <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={ThreeMap} />
                 </mesh>
-              </Canvas>
+              </Canvas> */}
+              <img src={'react.png'} style={{width: '100px', height: 'auto'}} />
             </Col>
 
-            <Col xs={3}>
-              <Canvas>
+            <Col xs={2}>
+              {/* <Canvas>
                 <ambientLight intensity={0.5} />
 
                 <OrbitControls />
@@ -271,11 +285,12 @@ function App() {
                   <MeshDistortMaterial side={THREE.DoubleSide} />
                   <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={FirebaseMap} />
                 </mesh>
-              </Canvas>
+              </Canvas> */}
+              <img src={'three.png'} style={{width: '100px', height: 'auto'}} />
             </Col>
 
-            <Col xs={3}>
-              <Canvas>
+            <Col xs={2}>
+              {/* <Canvas>
                 <ambientLight intensity={0.5} />
 
                 <OrbitControls />
@@ -285,7 +300,38 @@ function App() {
                   <MeshDistortMaterial side={THREE.DoubleSide} />
                   <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={WebXRMap} />
                 </mesh>
-              </Canvas>
+              </Canvas> */}
+              <img src={'firebase.png'} style={{width: '100px', height: 'auto'}} />
+            </Col>
+
+            <Col xs={2}>
+              {/* <Canvas>
+                <ambientLight intensity={0.5} />
+
+                <OrbitControls />
+
+                <mesh scale={1.75}>
+                  <circleGeometry />
+                  <MeshDistortMaterial side={THREE.DoubleSide} />
+                  <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={WebXRMap} />
+                </mesh>
+              </Canvas> */}
+              <img src={'metamask2.png'} style={{width: '100px', height: 'auto'}} />
+            </Col>
+
+            <Col xs={2}>
+              {/* <Canvas>
+                <ambientLight intensity={0.5} />
+
+                <OrbitControls />
+
+                <mesh scale={1.75}>
+                  <circleGeometry />
+                  <MeshDistortMaterial side={THREE.DoubleSide} />
+                  <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={WebXRMap} />
+                </mesh>
+              </Canvas> */}
+              <img src={'webxr.png'} style={{width: '100px', height: 'auto'}} />
             </Col>
           </Row>
         </div>
@@ -330,6 +376,8 @@ function App() {
         </Center>
 
         <OrbitControls />
+
+        <Environment preset={theme===true ? 'night' : 'dawn'} />
       </Canvas>
     </React.Fragment>
   );

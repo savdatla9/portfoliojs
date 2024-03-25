@@ -311,6 +311,7 @@
   z-index: 2;
   gap: 0.8rem;
   border-radius: 3rem;
+  margin-top: 3.5vh;
 }
 
 .social_links a {
