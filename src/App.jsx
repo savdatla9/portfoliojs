@@ -243,7 +243,7 @@ function App() {
           <h3 style={{textDecorationLine: 'underline'}}>Skills</h3>
 
           <Row>
-            <Col xs={3} xs={2}>
+            <Col xs={3} sm={2}>
               {/* <Canvas>
                 <ambientLight intensity={0.5} />
 
@@ -259,7 +259,7 @@ function App() {
               <img src={'react.png'} style={{width: '100px', height: 'auto'}} />
             </Col>
 
-            <Col xs={3} xs={2}>
+            <Col xs={3} sm={2}>
               {/* <Canvas>
                 <ambientLight intensity={0.5} />
 
@@ -274,7 +274,7 @@ function App() {
               <img src={'react.png'} style={{width: '100px', height: 'auto'}} />
             </Col>
 
-            <Col xs={2}>
+            <Col xs={3} sm={2}>
               {/* <Canvas>
                 <ambientLight intensity={0.5} />
 
@@ -289,7 +289,7 @@ function App() {
               <img src={'three.png'} style={{width: '100px', height: 'auto'}} />
             </Col>
 
-            <Col xs={3} xs={2}>
+            <Col xs={3} sm={2}>
               {/* <Canvas>
                 <ambientLight intensity={0.5} />
 
@@ -304,7 +304,7 @@ function App() {
               <img src={'firebase.png'} style={{width: '100px', height: 'auto'}} />
             </Col>
 
-            <Col xs={2}>
+            <Col xs={3} sm={2}>
               {/* <Canvas>
                 <ambientLight intensity={0.5} />
 
@@ -319,7 +319,7 @@ function App() {
               <img src={'metamask2.png'} style={{width: '100px', height: 'auto'}} />
             </Col>
 
-            <Col xs={3} xs={2}>
+            <Col xs={3} sm={2}>
               {/* <Canvas>
                 <ambientLight intensity={0.5} />
 
