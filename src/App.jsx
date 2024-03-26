@@ -162,13 +162,13 @@ function App() {
   //   );
   // };
 
-  const ReactMap = useLoader(THREE.TextureLoader, 'react.png');
+  // const ReactMap = useLoader(THREE.TextureLoader, 'react.png');
 
-  const ThreeMap = useLoader(THREE.TextureLoader, 'three.png');
+  // const ThreeMap = useLoader(THREE.TextureLoader, 'three.png');
 
-  const FirebaseMap = useLoader(THREE.TextureLoader, 'firebase.png');
+  // const FirebaseMap = useLoader(THREE.TextureLoader, 'firebase.png');
 
-  const WebXRMap = useLoader(THREE.TextureLoader, 'webxr.png');
+  // const WebXRMap = useLoader(THREE.TextureLoader, 'webxr.png');
 
   return (
     <React.Fragment>
@@ -342,7 +342,7 @@ function App() {
           theme===false 
           ? {height: '100vh', width: '100vw', backgroundColor: '#b0c4de'} 
           : {height: '100vh', width: '100vw', backgroundColor: '#242424'}
-        } shadows dpr={[1, 2]} camera={{ fov: 35, near: 1, far: 50 }}
+        } shadows dpr={[1, 2]} camera={{ fov: 25, near: 1, far: 50 }}
       >
         <hemisphereLight args={theme===false ? ['lightskyblue', 'dodgerblue'] : ['white', 'dimgray']} intensity={1.5} />
 
