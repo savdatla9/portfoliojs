@@ -6,7 +6,7 @@ import * as THREE from 'three';
 // import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 
 import { 
-  Canvas, useLoader, 
+  Canvas, 
   // useLoader,
   // useFrame, extend, 
 } from '@react-three/fiber';
@@ -19,14 +19,6 @@ import {
   OrbitControls, MeshWobbleMaterial, Decal,
   MeshDistortMaterial, Center, Environment
 } from '@react-three/drei';
-
-import "primereact/resources/themes/lara-light-indigo/theme.css";
-import "primereact/resources/primereact.min.css";                
-import "primeicons/primeicons.css"; 
-
-import 'bootstrap/dist/css/bootstrap.css'; 
-
-import './App.css';
 // import typewriter from './assets/fonts/Typewriter_Bold.json';
 // import helvetiker from "three/examples/fonts/helvetiker_regular.typeface.json";
 
