@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Home from './components/home';
-import WebXR from './components/webxr';
+import Home from './components/home.jsx';
+import WebXR from './components/webxr.jsx';
 
 const App = () => {
     return (
