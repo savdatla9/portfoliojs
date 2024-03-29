@@ -19,19 +19,24 @@ export const WebXR = ({xr}) => {
                     auto-rotate 
                     camera-controls
                     style={{
-                        width: '45vw', height: '45vh', margin: '3%',
+                        width: '50vw', height: '50vh', margin: '2%', zIndex: 500,
                         background: 'transparent', borderRadius: '5px',
                     }}
                 ></model-viewer>
             </Col>}
 
             {xr==='vr' && <Col xs={12} sm={6}>
-                <Scene>
-                    <Entity geometry={{primitive: 'torus'}} material={{color: 'red'}} position={{x: 0, y: 0, z: -5}} />
-                    <Entity light={{type: 'point'}} />
-                    <Entity gltf-model={{src: '/models/laptop.gltf'}} />
-                    <Entity text={{value: 'Hello, WebVR!'}} />
-                </Scene>
+                <div style={{
+                    width: '50vw', height: '50vh', margin: '2%', zIndex: 50,
+                    background: 'transparent', borderRadius: '5px',
+                }}>
+                    <Scene>
+                        <Entity geometry={{primitive: 'torus'}} material={{color: 'red'}} position={{x: 0, y: 0, z: -5}} />
+                        <Entity light={{type: 'point'}} />
+                        <Entity gltf-model={{src: '/models/laptop.gltf'}} />
+                        <Entity text={{value: 'Hello, WebVR!'}} />
+                    </Scene>
+                </div>
             </Col>}
         </Row>
     );
