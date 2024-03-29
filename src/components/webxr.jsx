@@ -8,7 +8,7 @@ import { Row, Col } from 'react-bootstrap';
 export const WebXR = () => {
     return (
         <Row>
-            <Col xs={6}>
+            <Col xs={12} sm={6}>
                 <model-viewer
                     autoplay 
                     ar
@@ -25,7 +25,7 @@ export const WebXR = () => {
                 ></model-viewer>
             </Col>
 
-            <Col xs={6}>
+            <Col xs={12} sm={6}>
                 <Scene>
                     <Entity geometry={{primitive: 'torus'}} material={{color: 'red'}} position={{x: 0, y: 0, z: -5}} />
                     <Entity light={{type: 'point'}} />
