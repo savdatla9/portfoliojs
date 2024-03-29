@@ -35,7 +35,7 @@ import {
 //   return <SpotLight castShadow ref={light} penumbra={1} distance={6} angle={0.35} attenuation={5} anglePower={4} intensity={2} {...props} />
 // };
 
-function Home() {
+function Home({xr, setxr}) {
   const [theme, setTheme] = useState(true);
 
   // extend({ TextGeometry });

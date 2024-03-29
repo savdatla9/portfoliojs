@@ -5,10 +5,10 @@ import 'aframe';
 import { Entity, Scene } from 'aframe-react';
 import { Row, Col } from 'react-bootstrap';
 
-export const WebXR = () => {
+export const WebXR = ({xr}) => {
     return (
         <Row>
-            <Col xs={12} sm={6}>
+            {xr==='ar' && <Col xs={12} sm={6}>
                 <model-viewer
                     autoplay 
                     ar
@@ -23,16 +23,16 @@ export const WebXR = () => {
                         background: 'transparent', borderRadius: '5px',
                     }}
                 ></model-viewer>
-            </Col>
+            </Col>}
 
-            <Col xs={12} sm={6}>
+            {xr==='vr' && <Col xs={12} sm={6}>
                 <Scene>
                     <Entity geometry={{primitive: 'torus'}} material={{color: 'red'}} position={{x: 0, y: 0, z: -5}} />
                     <Entity light={{type: 'point'}} />
                     <Entity gltf-model={{src: '/models/laptop.gltf'}} />
                     <Entity text={{value: 'Hello, WebVR!'}} />
                 </Scene>
-            </Col>
+            </Col>}
         </Row>
     );
 };
