@@ -23,7 +23,7 @@ export const WebXR = () => {
                     auto-rotate 
                     camera-controls
                     style={{
-                        width: '100vw', height: '50vh', margin: '1%',
+                        width: '100vw', height: '50vh', padding: '1%',
                         zIndex: 500, background: 'transparent',
                     }}
                 ></model-viewer>
@@ -31,7 +31,7 @@ export const WebXR = () => {
 
             {mode==='vr' && <Col xs={12} sm={6}>
                 <div style={{
-                    width: '50vw', height: '50vh', margin: '2%', 
+                    width: '50vw', height: '50vh', padding: '2%', 
                     zIndex: 50, background: 'transparent', 
                 }}>
                     <Scene>

@@ -40,7 +40,7 @@ import { UserState } from '../dataContext.jsx';
 
 function Home() {
   const { theme } = UserState();
-  
+
   const [text, setText] = useState('');
 
   const textArr = [
@@ -193,14 +193,14 @@ function Home() {
 
   return (
     <React.Fragment>
-      <div style={{position: 'absolute', zIndex: '500', color: '#fff', width: '100vw', height: '100vh', overflowY: 'scroll', overflowX: 'hidden'}} >
-        <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'ghostwhite'}}>
+      <div style={{position: 'absolute', zIndex: '500', color: '#fff', width: '100vw', height: '100vh', overflowY: 'hidden', overflowX: 'hidden'}} >
+        <div style={theme===false ? {paddingLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {paddingLeft: '2.5vw', marginTop: '5vh', color: 'ghostwhite'}}>
           <div style={{fontSize: '35px', fontWeight: '400'}}>Hi There,</div>
 
           <div style={{fontSize: '27px', fontWeight: '600', marginTop: '4.5px', display: 'flex'}}>
             <span style={{fontStyle: 'italic', fontFamily: 'cursive'}}>Sai Akhil Varma Datla</span> 
             {/* <div style={{marginLeft: '5px', marginTop: '-5px'}} className='yin-yang'></div> */}
-            <div style={{marginLeft: '5px', marginTop: '15px'}} className='infinity'></div><span>&nbsp;✌</span>
+            <div style={{paddingLeft: '5px', marginTop: '15px'}} className='infinity'></div><span>&nbsp;✌</span>
           </div>
 
           <div style={theme===false ? {fontSize: '25px', fontWeight: '600', marginTop: '10px', width: 'max-content', color: 'seagreen'} : {fontSize: '25px', fontWeight: '600', marginTop: '10px', width: 'max-content', color: 'aquamarine'}} className='typing'>            
@@ -223,7 +223,7 @@ function Home() {
 
         </div>
         
-        <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'silver'}}>
+        <div style={theme===false ? {paddingLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {paddingLeft: '2.5vw', marginTop: '5vh', color: 'silver'}}>
           <h3 style={{textDecorationLine: 'underline'}}>Skills</h3>
 
           <Row>
