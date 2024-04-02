@@ -11,14 +11,17 @@ import {
   // useFrame, extend, 
 } from '@react-three/fiber';
 
-import { ScrollPanel } from 'primereact/scrollpanel';
+// import { ScrollPanel } from 'primereact/scrollpanel';
 
 import { Row, Col } from 'react-bootstrap';
 
 import { 
-  OrbitControls, MeshWobbleMaterial, Decal,
+  OrbitControls, MeshWobbleMaterial, 
+  // Decal,
   MeshDistortMaterial, Center, Environment
 } from '@react-three/drei';
+
+import { UserState } from '../dataContext.jsx';
 // import typewriter from './assets/fonts/Typewriter_Bold.json';
 // import helvetiker from "three/examples/fonts/helvetiker_regular.typeface.json";
 
@@ -35,8 +38,34 @@ import {
 //   return <SpotLight castShadow ref={light} penumbra={1} distance={6} angle={0.35} attenuation={5} anglePower={4} intensity={2} {...props} />
 // };
 
-function Home({xr, setxr}) {
-  const [theme, setTheme] = useState(true);
+function Home() {
+  const { theme } = UserState();
+  
+  const [text, setText] = useState('');
+
+  const textArr = [
+    "I'm a React developer ☝", 
+    "I'm a Tech Enthusiast ♣", 
+    "Learning Three Js, AR/VR & Node Js ✍",
+  ];
+
+  function setRandomName() {
+    const index = Math.floor(Math.random() * textArr.length);
+
+    let newText = textArr[index];
+
+    if(newText===text){ 
+      setRandomName() 
+    }else{ 
+      setText(newText) 
+    }
+
+    return
+  };
+
+  useEffect(() => {
+    setTimeout(() => {setRandomName()}, 5000);
+  }, [text]);
 
   // extend({ TextGeometry });
 
@@ -164,56 +193,19 @@ function Home({xr, setxr}) {
 
   return (
     <React.Fragment>
-      <ScrollPanel style={{position: 'absolute', zIndex: '500', color: '#fff', width: '100vw', height: '100vh'}}>
-        <header style={{height: '5vh', padding: '2px', paddingTop: '4px'}}>
-          <div style={{display: 'flex', position: 'fixed'}}>
-            <div>
-              {/* <img /> */}
-              <h2 style={{marginLeft: '2.5vw', color: 'tomato', fontWeight: 'bold', textDecorationLine: 'underline'}}>S.A.V.D</h2>
-            </div>
-
-            <div style={{position: 'fixed', right: '18vw'}}> 
-              {/* {theme===true? <img src={'/sunlogo.png'} style={{width: '25px', height: 'auto'}} /> : <img src={'/moonlogo.png'} style={{width: '25px', height: 'auto'}} />} */}
-              
-              <div className="checkbox-wrapper-54">
-                <label className="switch">
-                  <input 
-                    type="checkbox" checked={theme} 
-                    onChange={(e) => setTheme(e.target.checked)} 
-                  />
-                  <span className="slider" />
-                </label>
-              </div>
-            </div>
-
-            <div style={{position: 'fixed', right: '2.5vw'}} className='btn_user'>
-              <div className="pi pi-user" style={{fontSize: '22px'}} />
-            </div>
-          </div>
-        </header>
-
+      <div style={{position: 'absolute', zIndex: '500', color: '#fff', width: '100vw', height: '100vh', overflowY: 'scroll', overflowX: 'hidden'}} >
         <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'ghostwhite'}}>
           <div style={{fontSize: '35px', fontWeight: '400'}}>Hi There,</div>
 
           <div style={{fontSize: '27px', fontWeight: '600', marginTop: '4.5px', display: 'flex'}}>
-            <span style={{fontStyle: 'italic', fontFamily: 'cursive'}}>Sai Akhil Varma Datla</span>. 
+            <span style={{fontStyle: 'italic', fontFamily: 'cursive'}}>Sai Akhil Varma Datla</span> 
             {/* <div style={{marginLeft: '5px', marginTop: '-5px'}} className='yin-yang'></div> */}
-            <div style={{marginLeft: '5px', marginTop: '15px'}} className='infinity'></div>
+            <div style={{marginLeft: '5px', marginTop: '15px'}} className='infinity'></div><span>&nbsp;✌</span>
           </div>
 
-          <l>
-            <li className='typing'>            
-              I'm a React developer with a passion for creating responsive and user-friendly web applications. 
-            </li>
-
-            <li className='typing'>
-              I'm also a AR/VR Enthusiast. Learning Three Js, Python & Node Js.
-            </li>
-
-            <li className='typing'>
-              Two steps away from becoming Full-Stack Developer.
-            </li>
-          </l>
+          <div style={theme===false ? {fontSize: '25px', fontWeight: '600', marginTop: '10px', width: 'max-content', color: 'seagreen'} : {fontSize: '25px', fontWeight: '600', marginTop: '10px', width: 'max-content', color: 'aquamarine'}} className='typing'>            
+            {text}
+          </div>
 
           <div className='social_links'>
             <a href='https://github.com/sai2702/' target='_blank'>
@@ -327,7 +319,7 @@ function Home({xr, setxr}) {
             </Col>
           </Row>
         </div>
-      </ScrollPanel>
+      </div>
 
       <Canvas 
         style={
