@@ -208,7 +208,7 @@ function Home() {
           </div>
 
           <div className='social_links'>
-            <a href='https://github.com/sai2702/' target='_blank'>
+            <a href='https://github.com/savdatla9/' target='_blank'>
               <img src={theme===false?'/github_dark.svg':'/github_light.svg'} />
             </a>
 
