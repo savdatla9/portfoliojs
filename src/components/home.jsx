@@ -240,7 +240,7 @@ function Home() {
                 </mesh>
               </Canvas> */}
 
-              <img src={'react.png'} style={{width: '100px', height: 'auto'}} />
+              <img src={'react.png'} style={{width: '90px', height: 'auto'}} />
             </Col>
 
             <Col xs={3} sm={2}>
@@ -255,7 +255,7 @@ function Home() {
                   <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={ThreeMap} />
                 </mesh>
               </Canvas> */}
-              <img src={'react.png'} style={{width: '100px', height: 'auto'}} />
+              <img src={'react.png'} style={{width: '90px', height: 'auto'}} />
             </Col>
 
             <Col xs={3} sm={2}>
@@ -270,7 +270,7 @@ function Home() {
                   <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={FirebaseMap} />
                 </mesh>
               </Canvas> */}
-              <img src={'three.png'} style={{width: '100px', height: 'auto'}} />
+              <img src={'three.png'} style={{width: '90px', height: 'auto'}} />
             </Col>
 
             <Col xs={3} sm={2}>
@@ -285,7 +285,7 @@ function Home() {
                   <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={WebXRMap} />
                 </mesh>
               </Canvas> */}
-              <img src={'firebase.png'} style={{width: '100px', height: 'auto'}} />
+              <img src={'firebase.png'} style={{width: '90px', height: 'auto'}} />
             </Col>
 
             <Col xs={3} sm={2}>
@@ -300,7 +300,7 @@ function Home() {
                   <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={WebXRMap} />
                 </mesh>
               </Canvas> */}
-              <img src={'metamask2.png'} style={{width: '100px', height: 'auto'}} />
+              <img src={'metamask2.png'} style={{width: '90px', height: 'auto'}} />
             </Col>
 
             <Col xs={3} sm={2}>
@@ -315,7 +315,7 @@ function Home() {
                   <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={WebXRMap} />
                 </mesh>
               </Canvas> */}
-              <img src={'webxr.png'} style={{width: '100px', height: 'auto'}} />
+              <img src={'webxr.png'} style={{width: '90px', height: 'auto'}} />
             </Col>
           </Row>
         </div>
