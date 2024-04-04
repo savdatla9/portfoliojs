@@ -3,16 +3,14 @@ import React from 'react';
 import 'aframe';
 import { Entity, Scene } from 'aframe-react';
 
-import { Row, Col } from 'react-bootstrap';
-
 import { UserState } from '../dataContext';
 
 export const WebXR = () => {
     const {mode, theme } = UserState();
     
     return (
-        <Row style={theme===true ? {backgroundColor: '#242424'} : {backgroundColor: '#b0c4de'}}>
-            {mode==='ar' && <Col xs={12} sm={6}>
+        <div style={theme===true ? {backgroundColor: '#242424'} : {backgroundColor: '#b0c4de'}}>
+            {mode==='ar' && <div>
                 <model-viewer
                     autoplay 
                     ar
@@ -27,11 +25,11 @@ export const WebXR = () => {
                         zIndex: 500, background: 'transparent',
                     }}
                 ></model-viewer>
-            </Col>}
+            </div>}
 
-            {mode==='vr' && <Col xs={12} sm={6}>
+            {mode==='vr' && <div>
                 <div style={{
-                    width: '50vw', height: '50vh', padding: '2%', 
+                    width: '100vw', height: '50vh', padding: '2%', 
                     zIndex: 50, background: 'transparent', 
                 }}>
                     <Scene>
@@ -41,8 +39,8 @@ export const WebXR = () => {
                         <Entity text={{value: 'Hello, WebVR!'}} />
                     </Scene>
                 </div>
-            </Col>}
-        </Row>
+            </div>}
+        </div>
     );
 };
 
