@@ -3,8 +3,6 @@ import React from 'react';
 import 'aframe';
 import { Entity, Scene } from 'aframe-react';
 
-import { Row, Col } from 'react-bootstrap';
-
 import { UserState } from '../dataContext';
 
 export const WebXR = () => {
@@ -23,7 +21,7 @@ export const WebXR = () => {
                     auto-rotate 
                     camera-controls
                     style={{
-                        width: '100vw', height: '50vh', margin: '1%',
+                        width: '100%', height: '50vh', padding: '1%',
                         zIndex: 500, background: 'transparent',
                     }}
                 ></model-viewer>
@@ -31,7 +29,7 @@ export const WebXR = () => {
 
             {mode==='vr' && <div>
                 <div style={{
-                    width: '100vw', height: '50vh', margin: '2%', 
+                    width: '100%', height: '50vh', padding: '2%', 
                     zIndex: 50, background: 'transparent', 
                 }}>
                     <Scene>
@@ -42,7 +40,7 @@ export const WebXR = () => {
                     </Scene>
                 </div>
             </div>}
-        </Row>
+        </div>
     );
 };
 

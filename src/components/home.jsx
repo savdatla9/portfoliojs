@@ -40,18 +40,18 @@ import { UserState } from '../dataContext.jsx';
 
 function Home() {
   const { theme } = UserState();
-  
+
   const [text, setText] = useState('');
 
   const textArr = [
     "I'm a React developer ☝", 
     "I'm a Tech Enthusiast ♣", 
-    "Learning Three Js, AR/VR & Node Js ✍",
+    "Learning Three JS & Node JS ✍",
   ];
 
   function setRandomName() {
     const index = Math.floor(Math.random() * textArr.length);
-
+    
     let newText = textArr[index];
 
     if(newText===text){ 
@@ -66,6 +66,10 @@ function Home() {
   useEffect(() => {
     setTimeout(() => {setRandomName()}, 5000);
   }, [text]);
+
+  useEffect(() => {
+    document.title = 'Welcome to S.A.V.D Home';
+  }, []);
 
   // extend({ TextGeometry });
 
@@ -156,9 +160,6 @@ function Home() {
   //   return <primitive object={scene} scale={0.005} position={[0.75, 0, 0]} />
   // };
 
-  useEffect(() => {
-    document.title = 'Home Page- S.A.V.D';
-  }, []);
 
   // const items = [
   //   { status: 'Ordered', date: '15/10/2020 10:30', icon: 'pi pi-shopping-cart', color: '#9C27B0' },
@@ -193,14 +194,14 @@ function Home() {
 
   return (
     <React.Fragment>
-      <div style={{position: 'absolute', zIndex: '500', color: '#fff', width: '100vw', height: '100vh', overflowY: 'scroll', overflowX: 'hidden'}} >
-        <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'ghostwhite'}}>
+      <div style={{position: 'absolute', zIndex: '500', color: '#fff', width: '100%', height: '100vh', overflow: 'hidden'}} >
+        <div style={theme===false ? {paddingLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {paddingLeft: '2.5vw', marginTop: '5vh', color: 'ghostwhite'}}>
           <div style={{fontSize: '35px', fontWeight: '400'}}>Hi There,</div>
 
           <div style={{fontSize: '27px', fontWeight: '600', marginTop: '4.5px', display: 'flex'}}>
             <span style={{fontStyle: 'italic', fontFamily: 'cursive'}}>Sai Akhil Varma Datla</span> 
             {/* <div style={{marginLeft: '5px', marginTop: '-5px'}} className='yin-yang'></div> */}
-            <div style={{marginLeft: '5px', marginTop: '15px'}} className='infinity'></div><span>&nbsp;✌</span>
+            <div style={{paddingLeft: '5px', marginTop: '15px'}} className='infinity'></div><span>✌</span>
           </div>
 
           <div style={theme===false ? {fontSize: '25px', fontWeight: '600', marginTop: '10px', width: 'max-content', color: 'seagreen'} : {fontSize: '25px', fontWeight: '600', marginTop: '10px', width: 'max-content', color: 'aquamarine'}} className='typing'>            
@@ -208,7 +209,7 @@ function Home() {
           </div>
 
           <div className='social_links'>
-            <a href='https://github.com/sai2702/' target='_blank'>
+            <a href='https://github.com/savdatla9/' target='_blank'>
               <img src={theme===false?'/github_dark.svg':'/github_light.svg'} />
             </a>
 
@@ -223,27 +224,27 @@ function Home() {
 
         </div>
         
-        <div style={theme===false ? {marginLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {marginLeft: '2.5vw', marginTop: '5vh', color: 'silver'}}>
+        <div style={theme===false ? {paddingLeft: '2.5vw', marginTop: '5vh', color: 'black'} : {paddingLeft: '2.5vw', marginTop: '5vh', color: 'silver'}}>
           <h3 style={{textDecorationLine: 'underline'}}>Skills</h3>
 
           <Row>
-            <Col xs={3} sm={2}>
-              {/* <Canvas>
-                <ambientLight intensity={0.5} />
-
-                <OrbitControls />
-
-                <mesh scale={1.75}>
-                  <circleGeometry />
-                  <MeshDistortMaterial side={THREE.DoubleSide} />
-                  <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={ReactMap} />
-                </mesh>
-              </Canvas> */}
-
-              <img src={'react.png'} style={{width: '100px', height: 'auto'}} />
+            <Col xs={4} sm={2}>
+              <img src={'html.png'} style={{width: '90px', height: 'auto'}} />
             </Col>
 
-            <Col xs={3} sm={2}>
+            <Col xs={4} sm={2}>
+              <img src={'css.png'} style={{width: '90px', height: 'auto'}} />
+            </Col>
+
+            <Col xs={4} sm={2}>
+              <img src={'js.png'} style={{width: '90px', height: 'auto'}} />
+            </Col>
+
+            <Col xs={4} sm={2}>
+             <img src={'react.png'} style={{width: '90px', height: 'auto'}} />
+            </Col>
+
+            {/* <Col xs={3} sm={2}> */}
               {/* <Canvas>
                 <ambientLight intensity={0.5} />
 
@@ -255,40 +256,18 @@ function Home() {
                   <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={ThreeMap} />
                 </mesh>
               </Canvas> */}
-              <img src={'react.png'} style={{width: '100px', height: 'auto'}} />
+              {/* <img src={'react.png'} style={{width: '90px', height: 'auto'}} />
+            </Col> */}
+
+            <Col xs={4} sm={2}>
+              <img src={'three.png'} style={{width: '90px', height: 'auto'}} />
             </Col>
 
-            <Col xs={3} sm={2}>
-              {/* <Canvas>
-                <ambientLight intensity={0.5} />
-
-                <OrbitControls />
-
-                <mesh scale={1.75}>
-                  <circleGeometry />
-                  <MeshDistortMaterial side={THREE.DoubleSide} />
-                  <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={FirebaseMap} />
-                </mesh>
-              </Canvas> */}
-              <img src={'three.png'} style={{width: '100px', height: 'auto'}} />
+            <Col xs={4} sm={2}>
+              <img src={'firebase.png'} style={{width: '90px', height: 'auto'}} />
             </Col>
 
-            <Col xs={3} sm={2}>
-              {/* <Canvas>
-                <ambientLight intensity={0.5} />
-
-                <OrbitControls />
-
-                <mesh scale={1.75}>
-                  <circleGeometry />
-                  <MeshDistortMaterial side={THREE.DoubleSide} />
-                  <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={WebXRMap} />
-                </mesh>
-              </Canvas> */}
-              <img src={'firebase.png'} style={{width: '100px', height: 'auto'}} />
-            </Col>
-
-            <Col xs={3} sm={2}>
+            {/* <Col xs={3} sm={2}> */}
               {/* <Canvas>
                 <ambientLight intensity={0.5} />
 
@@ -300,22 +279,11 @@ function Home() {
                   <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={WebXRMap} />
                 </mesh>
               </Canvas> */}
-              <img src={'metamask2.png'} style={{width: '100px', height: 'auto'}} />
-            </Col>
+              {/* <img src={'metamask2.png'} style={{width: '90px', height: 'auto'}} />
+            </Col> */}
 
             <Col xs={3} sm={2}>
-              {/* <Canvas>
-                <ambientLight intensity={0.5} />
-
-                <OrbitControls />
-
-                <mesh scale={1.75}>
-                  <circleGeometry />
-                  <MeshDistortMaterial side={THREE.DoubleSide} />
-                  <Decal polygonOffsetFactor={-0} position={[0, 0, 0]} scale={1.35} map={WebXRMap} />
-                </mesh>
-              </Canvas> */}
-              <img src={'webxr.png'} style={{width: '100px', height: 'auto'}} />
+              <img src={'webxr.png'} style={{width: '90px', height: 'auto'}} />
             </Col>
           </Row>
         </div>
@@ -324,8 +292,8 @@ function Home() {
       <Canvas 
         style={
           theme===false 
-          ? {height: '100vh', width: '100vw', backgroundColor: '#b0c4de'} 
-          : {height: '100vh', width: '100vw', backgroundColor: '#242424'}
+          ? {height: '110vh', width: '100%', backgroundColor: '#b0c4de', marginTop: '-10vh'} 
+          : {height: '110vh', width: '100%', backgroundColor: '#242424', marginTop: '-10vh'}
         } shadows dpr={[1, 2]} camera={{ fov: 45, near: 1, far: 50 }}
       >
         <hemisphereLight args={theme===false ? ['lightskyblue', 'dodgerblue'] : ['white', 'dimgray']} intensity={1.5} />
@@ -333,7 +301,7 @@ function Home() {
         <ambientLight intensity={0.15} />
 
         <Center>
-          <mesh scale={0.5} position={[0, 1.5, 0]}>
+          <mesh scale={0.5} position={[0, 0.95, 0]}>
             <octahedronGeometry />
             <MeshWobbleMaterial
               side={THREE.DoubleSide}
@@ -341,7 +309,7 @@ function Home() {
             />
           </mesh>
 
-          <mesh scale={0.5} position={[0, -0.35, 0]} rotation={[0, 0, -90]}>
+          <mesh scale={0.5} position={[0, -0.75, 0]} rotation={[0, 0, -90]}>
             <torusKnotGeometry />
             <MeshWobbleMaterial
               side={THREE.DoubleSide}
