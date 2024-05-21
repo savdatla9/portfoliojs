@@ -44,9 +44,10 @@ function Home() {
   const [text, setText] = useState('');
 
   const textArr = [
-    "I'm a React developer ☝", 
-    "I'm a Tech Enthusiast ♣", 
-    "Learning Three JS & Node JS ✍",
+    "I'm a React developer", 
+    "I'm a Tech Enthusiast", 
+    "Learning Three JS & Node JS",
+    "Learning Unreal Engine & AR/VR"
   ];
 
   function setRandomName() {
@@ -64,7 +65,7 @@ function Home() {
   };
 
   useEffect(() => {
-    setTimeout(() => {setRandomName()}, 5000);
+    setTimeout(() => {setRandomName()}, 2500);
   }, [text]);
 
   useEffect(() => {

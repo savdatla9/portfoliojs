@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '@google/model-viewer';
+
 import 'aframe';
 import { Entity, Scene } from 'aframe-react';
 
